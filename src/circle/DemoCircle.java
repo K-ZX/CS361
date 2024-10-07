@@ -4,7 +4,7 @@
 package circle;
 
 /**
- * @author ADD YOUR NAME
+ * @author Omar Alcantar
  *
  */
 public class DemoCircle {
@@ -25,23 +25,23 @@ public class DemoCircle {
 		System.out.println("c - x = " + c.centerX + " y = " + c.centerY );
 		System.out.println("cc - x = " + cc.centerX + " y = " + cc.centerY );
 		
-		c.draw(); 	// Drawing a Circle... 
-					// draw method from Circle
+		c.draw(); 	
+					
 		
-		// Upcasting
+		
 		c = cc; 
 		
 		System.out.println("c: Circle = cc: ColoredCircle"); 
 
 		System.out.println("c - x = " + c.centerX + " y = " + c.centerY );
-		c.draw(); 	// Drawing a ColoredCircle...
-					// draw method from ColoredCircle
-					// method resolution at run time
+		c.draw(); 	
+					
+					
 		
 		System.out.println("cc - x = " + cc.centerX + " y = " + cc.centerY );
-		cc.draw(); 	// Drawing a ColoredCircle...
-					// draw method from ColoredCircle
-					// method resolution at run time
+		cc.draw(); 	
+					
+					
 		
 		Circle c1 = new Circle();
 		c1.centerX = 6.0;
