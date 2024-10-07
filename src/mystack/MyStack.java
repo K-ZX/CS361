@@ -5,7 +5,7 @@ package mystack;
  *
  */
 
-// Stack using generics
+
 public class MyStack<T> {
 
     private class MyNode<T1> {
@@ -20,14 +20,12 @@ public class MyStack<T> {
 
     private MyNode<T> theStack = null;
 
-    /**
-     * Default constructor
-     */
+
     public MyStack() {
     }
 
     /**
-     * Push a value onto the stack
+     * 
      * 
      * @param v the value to push
      */
@@ -37,24 +35,20 @@ public class MyStack<T> {
     }
 
     /**
-     * Pop the value from the top of the stack
      * 
-     * @return the value popped, or null if the stack is empty
+     * 
+     * 
      */
     public T pop() {
         if (theStack == null) {
-            return null; // Stack is empty
+            return null; 
         }
-        T value = theStack.val; // Get the top value
-        theStack = theStack.next; // Move to the next node
+        T value = theStack.val; 
+        theStack = theStack.next; 
         return value;
     }
 
-    /**
-     * Check if the stack is empty
-     * 
-     * @return true if the stack is empty, false otherwise
-     */
+
     public boolean isEmpty() {
         return theStack == null;
     }
@@ -64,9 +58,9 @@ public class MyStack<T> {
         MyStack<Integer> intStack = new MyStack<>();
         intStack.push(1);
         intStack.push(2);
-        System.out.println("Popped from intStack: " + intStack.pop()); // Expect 2
+        System.out.println("Popped from intStack: " + intStack.pop()); 
         intStack.push(5);
-        System.out.println("Popped from intStack: " + intStack.pop()); // Expect 5
+        System.out.println("Popped from intStack: " + intStack.pop()); 
 
         
         MyStack<Person> personStack = new MyStack<>();
@@ -74,8 +68,8 @@ public class MyStack<T> {
         Person p2 = new Person("My Name");
         personStack.push(p1);
         personStack.push(p2);
-        System.out.println("Popped from personStack: " + personStack.pop()); // Expect p2
-        System.out.println("Popped from personStack: " + personStack.pop()); // Expect p1
+        System.out.println("Popped from personStack: " + personStack.pop()); 
+        System.out.println("Popped from personStack: " + personStack.pop()); 
     }
 }
 
